@@ -11,7 +11,7 @@ use Exception;
 
 class PredictionsResource extends Resource
 {
-    protected ?string $webhookUrl;
+    protected ?string $webhookUrl = null;
 
     /**
      * @var array<string>
