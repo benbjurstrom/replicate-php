@@ -13,4 +13,7 @@
             <directory suffix=".php">./tests</directory>
         </testsuite>
     </testsuites>
+    <php>
+        <env name="REPLICATE_API_TOKEN" value="REPLICATE_API_TOKEN"/>
+    </php>
 </phpunit>
