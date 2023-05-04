@@ -23,7 +23,7 @@ final class PredictionData
         public string $status,
         public bool|null $webhookCompleted,
         public array $input,
-        public array $metrics,
+        public array|null $metrics,
         public array $urls,
         public array|string|null $error,
         public string|array|null $output,
@@ -44,12 +44,12 @@ final class PredictionData
             completedAt: $data['completed_at'] ?? null,
             startedAt: $data['started_at'] ?? null,
             status: $data['status'],
-            webhookCompleted: $data['webhook_completed'],
+            webhookCompleted: $data['webhook_completed'] ?? null,
             input: $data['input'],
-            metrics: $data['metrics'],
+            metrics: $data['metrics'] ?? null,
             urls: $data['urls'],
-            error: $data['error'],
-            output: $data['output'],
+            error: $data['error'] ?? null,
+            output: $data['output'] ?? null,
         );
     }
 }
