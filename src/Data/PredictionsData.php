@@ -3,7 +3,7 @@
 namespace BenBjurstrom\Replicate\Data;
 
 use Exception;
-use Saloon\Contracts\Response;
+use Saloon\Http\Response;
 
 final class PredictionsData
 {

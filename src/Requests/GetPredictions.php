@@ -3,7 +3,7 @@
 namespace BenBjurstrom\Replicate\Requests;
 
 use BenBjurstrom\Replicate\Data\PredictionsData;
-use Saloon\Contracts\Response;
+use Saloon\Http\Response;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 

@@ -4,7 +4,7 @@ namespace BenBjurstrom\Replicate\Requests;
 
 use BenBjurstrom\Replicate\Data\PredictionData;
 use Saloon\Contracts\Body\HasBody;
-use Saloon\Contracts\Response;
+use Saloon\Http\Response;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;

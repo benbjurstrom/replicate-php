@@ -2,7 +2,7 @@
 
 namespace BenBjurstrom\Replicate;
 
-use Saloon\Contracts\Connector;
+use Saloon\Http\Connector;
 
 class Resource
 {
