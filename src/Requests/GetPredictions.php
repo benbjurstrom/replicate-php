@@ -3,9 +3,9 @@
 namespace BenBjurstrom\Replicate\Requests;
 
 use BenBjurstrom\Replicate\Data\PredictionsData;
-use Saloon\Http\Response;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
+use Saloon\Http\Response;
 
 class GetPredictions extends Request
 {
