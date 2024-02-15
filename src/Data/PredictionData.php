@@ -3,7 +3,7 @@
 namespace BenBjurstrom\Replicate\Data;
 
 use Exception;
-use Saloon\Contracts\Response;
+use Saloon\Http\Response;
 
 final class PredictionData
 {
@@ -18,12 +18,12 @@ final class PredictionData
         public string $id,
         public string $version,
         public string $createdAt,
-        public string|null $completedAt,
-        public string|null $startedAt,
+        public ?string $completedAt,
+        public ?string $startedAt,
         public string $status,
-        public bool|null $webhookCompleted,
+        public ?bool $webhookCompleted,
         public array $input,
-        public array|null $metrics,
+        public ?array $metrics,
         public array $urls,
         public array|string|null $error,
         public string|array|null $output,
@@ -37,7 +37,7 @@ final class PredictionData
             throw new Exception('Invalid response');
         }
 
-        return new static(
+        return new self(
             id: $data['id'],
             version: $data['version'],
             createdAt: $data['created_at'],

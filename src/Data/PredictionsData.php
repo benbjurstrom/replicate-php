@@ -3,7 +3,7 @@
 namespace BenBjurstrom\Replicate\Data;
 
 use Exception;
-use Saloon\Contracts\Response;
+use Saloon\Http\Response;
 
 final class PredictionsData
 {
@@ -11,8 +11,8 @@ final class PredictionsData
      * @param  array<int, PredictionData>  $results
      */
     public function __construct(
-        public string|null $previous,
-        public string|null $next,
+        public ?string $previous,
+        public ?string $next,
         public array $results
     ) {
     }
@@ -42,7 +42,7 @@ final class PredictionsData
             );
         }
 
-        return new static(
+        return new self(
             previous: $data['previous'],
             next: $data['next'],
             results: $results,

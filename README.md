@@ -1,5 +1,5 @@
 # Replicate PHP client
-This is a framework-agnostic PHP client for [Replicate.com](https://replicate.com/) built on the amazing [Saloon v2](https://docs.saloon.dev/) 🤠 library. Use it to easily interact with machine learning models such as Stable Diffusion right from your PHP application.
+This is a framework-agnostic PHP client for [Replicate.com](https://replicate.com/) built on the amazing [Saloon v3](https://docs.saloon.dev/) 🤠 library. Use it to easily interact with machine learning models such as Stable Diffusion right from your PHP application.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/benbjurstrom/replicate-php.svg?style=flat-square)](https://packagist.org/packages/benbjurstrom/replicate-php)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/benbjurstrom/replicate-php/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/benbjurstrom/replicate-php/actions?query=workflow%3tests+branch%3Amain)
