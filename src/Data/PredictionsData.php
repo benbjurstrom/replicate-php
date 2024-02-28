@@ -28,6 +28,7 @@ final class PredictionsData
         foreach ($data['results'] as $result) {
             $results[] = new PredictionData(
                 id: $result['id'],
+                model: $data['model'],
                 version: $result['version'],
                 createdAt: $result['created_at'],
                 completedAt: $result['completed_at'],

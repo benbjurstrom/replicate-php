@@ -16,6 +16,7 @@ final class PredictionData
      */
     public function __construct(
         public string $id,
+        public string $model,
         public string $version,
         public string $createdAt,
         public ?string $completedAt,
@@ -39,6 +40,7 @@ final class PredictionData
 
         return new self(
             id: $data['id'],
+            model: $data['model'],
             version: $data['version'],
             createdAt: $data['created_at'],
             completedAt: $data['completed_at'] ?? null,
