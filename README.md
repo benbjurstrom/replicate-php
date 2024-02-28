@@ -55,6 +55,29 @@ $data->id; // yfv4cakjzvh2lexxv7o5qzymqy
 Note that the input parameters will vary depending on what version (model) you're using. In this example version [db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf](https://replicate.com/stability-ai/stable-diffusion/versions/db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf) is a Stable Diffusion 2.1 model optimized for speed.
 ###
 
+## Create a prediction for a specific deployment
+ou can now create a prediction for a specific deployment using the createForDeployment method. This method takes the full name of the deployment and an array of data as input, sends the HTTP request, and returns the data of the created prediction.
+
+Here's an example of how to use it:
+```php
+$deploymentName = 'my-deployment';
+$input = [
+    'model' => 'stable-diffusion-2-1',
+    'prompt' => 'a photo of an astronaut riding a horse on mars',
+    'negative_prompt' => 'moon, alien, spaceship',
+    'width' => 768,
+    'height' => 768,
+    'num_inference_steps' => 50,
+    'guidance_scale' => 7.5,
+    'scheduler' => 'DPMSolverMultistep',
+    'seed' => null,
+];
+
+$data = $api->predictions()->createForDeployment($deploymentName, $input);
+$data->id; // yfv4cakjzvh2lexxv7o5qzymqy
+```
+###
+
 ## Using with Laravel
 Begin by adding your credentials to your services config file.
 ```php
